@@ -7,9 +7,11 @@ let charLimit=document.getElementById("charLimit");
 let warning=document.getElementById("warningMessage");
 let readingTime=document.getElementById("readingTime");
 let densityContainer=document.getElementById("densityContainer");
+let themee=document.getElementById("themeToggle");
 textt.addEventListener("input",updateStats);
 excludespace.addEventListener("change",updateStats);
 charLimit.addEventListener("input",updateStats);
+themee.addEventListener("click", toggleTheme);
 
 
 function updateStats(){
@@ -84,4 +86,13 @@ function updateStats(){
         "</p>";
     }
 
+}
+function toggleTheme(){
+    document.body.classList.toggle("light");
+    if(document.body.classList.contains("light")){
+        themeToggle.textContent="🌙";
+    }
+    else{
+        themeToggle.textContent="☀️";
+    }
 }
