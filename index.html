@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h4>Character Counter</h4>
+        <button id="themeToggle">☀️</button>
+    </header>
+
+    <h1>Analyze your text in real-time.</h1>
+
+    <textarea id="textInput" placeholder="Start typing here..."></textarea>
+
+    <div class="controls">
+        <div class="left">
+            <label>
+                Exclude Spaces
+                <input type="checkbox" id="excludeSpaces">
+            </label>
+            <label>
+                Character Limit
+                <input type="number" id="charLimit">
+            </label>
+        </div>
+        <div class="right" id="readingTime">
+            Approx. reading time: 0 min
+        </div>
+
+    </div>
+
+    <p id="warningMessage"></p>
+
+    <div class="stats">
+
+        <div class="card">
+            <h2 id="charCount">0</h2>
+            <p>Total Characters</p>
+        </div>
+
+        <div class="card">
+            <h2 id="wordCount">0</h2>
+            <p>Word Count</p>
+        </div>
+
+        <div class="card">
+            <h2 id="sentenceCount">0</h2>
+            <p>Sentence Count</p>
+        </div>
+
+    </div>
+
+
+    <h3>Letter Density</h3>
+
+    <div id="densityContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
